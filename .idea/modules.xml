@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/SettingView.iml" filepath="$PROJECT_DIR$/SettingView.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/settingitem/settingitem.iml" filepath="$PROJECT_DIR$/settingitem/settingitem.iml" />
+    </modules>
+  </component>
+</project>

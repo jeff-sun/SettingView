@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SettingView">
+        <attr name="item_background" format="reference" />
+        <attr name="item_text" format="string" />
+        <attr name="left_icon_margin_left" format="dimension" />
+        <attr name="left_icon" format="reference" />
+        <attr name="text_margin_left" format="dimension" />
+        <attr name="right_icon" format="reference" />
+        <attr name="right_icon_margin_right" format="dimension" />
+        <attr name="text_size" format="dimension" />
+        <attr name="text_color" format="color" />
+        <attr name="show_left_icon" format="boolean" />
+        <attr name="show_right_icon" format="boolean" />
+        <attr name="show_dot" format="boolean" />
+    </declare-styleable>
+</resources>
