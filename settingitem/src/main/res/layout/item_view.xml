@@ -2,8 +2,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/rel_root"
     android:layout_width="match_parent"
-    android:layout_height="44dp"
-    android:clickable="true">
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:gravity="center_vertical">
 
     <ImageView
         android:id="@+id/iv_left"
@@ -19,8 +20,7 @@
         android:layout_height="match_parent"
         android:layout_marginLeft="10dp"
         android:layout_toRightOf="@id/iv_left"
-        android:gravity="center"
-        android:text="我的简历" />
+        android:gravity="center" />
 
     <ImageView
         android:id="@+id/iv_right"

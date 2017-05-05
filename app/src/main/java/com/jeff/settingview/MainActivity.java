@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        SettingView item = (SettingView) findViewById(R.id.setting);
+        final SettingView item = (SettingView) findViewById(R.id.setting);
         item.setOnItemViewClick(new SettingView.OnItemViewClick() {
             @Override
             public void itemClick() {

@@ -52,7 +52,7 @@ public class SettingView extends RelativeLayout {
                 }
             } else if (attr == R.styleable.SettingView_item_text) {    //条目文字
                 String string = a.getString(attr);
-                mTvText.setText(string);
+                setItemText(string);
             } else if (attr == R.styleable.SettingView_text_color) {   //文字颜色
                 int color = a.getColor(attr, Color.BLACK);
                 mTvText.setTextColor(color);
@@ -70,10 +70,10 @@ public class SettingView extends RelativeLayout {
                 int left = a.getDimensionPixelSize(attr, 20);
                 params.leftMargin = left;
                 mLeftIcon.setLayoutParams(params);
-            } else if (attr == R.styleable.SettingView_text_margin_left) {   //左边图片marginright
+            } else if (attr == R.styleable.SettingView_text_margin_left) {   //文字marginright
                 RelativeLayout.LayoutParams params = (LayoutParams) mTvText.getLayoutParams();
                 int right = a.getDimensionPixelSize(attr, 20);
-                params.rightMargin = right;
+                params.leftMargin = right;
                 mTvText.setLayoutParams(params);
             } else if (attr == R.styleable.SettingView_right_icon_margin_right) {  //右边图片距离右边距离
                 RelativeLayout.LayoutParams params = (LayoutParams) mRightIcon.getLayoutParams();
@@ -82,25 +82,13 @@ public class SettingView extends RelativeLayout {
                 mRightIcon.setLayoutParams(params);
             } else if (attr == R.styleable.SettingView_show_left_icon) {
                 boolean show = a.getBoolean(attr, true);
-                if (!show) {
-                    mLeftIcon.setVisibility(GONE);
-                } else {
-                    mLeftIcon.setVisibility(VISIBLE);
-                }
+                showLeftIcon(show);
             } else if (attr == R.styleable.SettingView_show_right_icon) {
                 boolean show = a.getBoolean(attr, true);
-                if (!show) {
-                    mRightIcon.setVisibility(GONE);
-                } else {
-                    mRightIcon.setVisibility(VISIBLE);
-                }
-            }else if (attr == R.styleable.SettingView_show_dot) {
+                showRightIcon(show);
+            } else if (attr == R.styleable.SettingView_show_dot) {
                 boolean show = a.getBoolean(attr, false);
-                if (show) {
-                    mIvDot.setVisibility(VISIBLE);
-                } else {
-                    mIvDot.setVisibility(GONE);
-                }
+                showDot(show);
             }
         }
         a.recycle();
@@ -138,6 +126,7 @@ public class SettingView extends RelativeLayout {
 
     /**
      * 是否显示右边图标
+     *
      * @param show
      */
     public void showRightIcon(boolean show) {
@@ -146,6 +135,28 @@ public class SettingView extends RelativeLayout {
         } else {
             mRightIcon.setVisibility(GONE);
         }
+    }
+
+    /**
+     * 显示小红点
+     *
+     * @param show
+     */
+    public void showDot(boolean show) {
+        if (show) {
+            mIvDot.setVisibility(VISIBLE);
+        } else {
+            mIvDot.setVisibility(GONE);
+        }
+    }
+
+    /**
+     * 设置条目文字
+     *
+     * @param text
+     */
+    public void setItemText(String text) {
+        mTvText.setText(text);
     }
 
     public void setOnItemViewClick(OnItemViewClick onItemviewClick) {
