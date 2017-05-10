@@ -1,5 +1,5 @@
 apply plugin: 'com.android.library'
-
+apply plugin: 'com.novoda.bintray-release'
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.3"
@@ -29,3 +29,12 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.1.1'
     testCompile 'junit:junit:4.12'
 }
+publish {
+    userOrg = 'jeff-sun'    //bintray上的用户名
+    groupId = 'com.jeff'    //jcenter上的路径
+    artifactId = 'settingitem'      //项目名称
+    publishVersion = '1.0'      //版本号
+    desc = 'this is a settingitem'      //项目描述
+    website = 'https://github.com/jeff-sun/SettingView'     //网站,这个不重要,可以写github上你项目的地址.
+}
+

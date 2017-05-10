@@ -43,39 +43,39 @@ public class SettingView extends RelativeLayout {
         int count = a.getIndexCount();
         for (int i = 0; i < count; i++) {
             int attr = a.getIndex(i);
-            if (attr == R.styleable.SettingView_item_background) { //背景颜色,也可以是一个selector
+            if (attr == R.styleable.SettingView_item_background) { //backgroundcolor,is a color or selector
                 Drawable drawable = a.getDrawable(attr);
                 if (Build.VERSION.SDK_INT >= 16) {
                     mRootView.setBackground(drawable);
                 } else {
                     mRootView.setBackgroundDrawable(drawable);
                 }
-            } else if (attr == R.styleable.SettingView_item_text) {    //条目文字
+            } else if (attr == R.styleable.SettingView_item_text) {    //item text
                 String string = a.getString(attr);
                 setItemText(string);
-            } else if (attr == R.styleable.SettingView_text_color) {   //文字颜色
+            } else if (attr == R.styleable.SettingView_text_color) {   //tiem text color
                 int color = a.getColor(attr, Color.BLACK);
                 mTvText.setTextColor(color);
-            } else if (attr == R.styleable.SettingView_text_size) {    //文字大小
+            } else if (attr == R.styleable.SettingView_text_size) {    //item text size
                 int size = a.getDimensionPixelSize(attr, 16);
                 mTvText.setTextSize(px2sp(context, size));
-            } else if (attr == R.styleable.SettingView_left_icon) {    //左边图片
+            } else if (attr == R.styleable.SettingView_left_icon) {    //left icon
                 Drawable drawable = a.getDrawable(attr);
                 mLeftIcon.setImageDrawable(drawable);
-            } else if (attr == R.styleable.SettingView_right_icon) {   //右边图片
+            } else if (attr == R.styleable.SettingView_right_icon) {   //right icon
                 Drawable drawable = a.getDrawable(attr);
                 mRightIcon.setImageDrawable(drawable);
-            } else if (attr == R.styleable.SettingView_left_icon_margin_left) {    //左边图片marginleft
+            } else if (attr == R.styleable.SettingView_left_icon_margin_left) {    //marginleft of the left icon
                 RelativeLayout.LayoutParams params = (LayoutParams) mLeftIcon.getLayoutParams();
                 int left = a.getDimensionPixelSize(attr, 20);
                 params.leftMargin = left;
                 mLeftIcon.setLayoutParams(params);
-            } else if (attr == R.styleable.SettingView_text_margin_left) {   //文字marginright
+            } else if (attr == R.styleable.SettingView_text_margin_left) {   //marginright of the text
                 RelativeLayout.LayoutParams params = (LayoutParams) mTvText.getLayoutParams();
                 int right = a.getDimensionPixelSize(attr, 20);
                 params.leftMargin = right;
                 mTvText.setLayoutParams(params);
-            } else if (attr == R.styleable.SettingView_right_icon_margin_right) {  //右边图片距离右边距离
+            } else if (attr == R.styleable.SettingView_right_icon_margin_right) {  //marginright of the right icon
                 RelativeLayout.LayoutParams params = (LayoutParams) mRightIcon.getLayoutParams();
                 float left = a.getDimension(attr, 0);
                 params.rightMargin = (int) left;
@@ -112,7 +112,7 @@ public class SettingView extends RelativeLayout {
     }
 
     /**
-     * 是否显示左边图标
+     * is show left icon
      *
      * @param show
      */
@@ -125,7 +125,7 @@ public class SettingView extends RelativeLayout {
     }
 
     /**
-     * 是否显示右边图标
+     * is show righticon
      *
      * @param show
      */
@@ -138,7 +138,7 @@ public class SettingView extends RelativeLayout {
     }
 
     /**
-     * 显示小红点
+     * is show dot
      *
      * @param show
      */
@@ -151,7 +151,7 @@ public class SettingView extends RelativeLayout {
     }
 
     /**
-     * 设置条目文字
+     * setting item text
      *
      * @param text
      */

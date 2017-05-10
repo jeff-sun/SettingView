@@ -11,12 +11,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        final SettingView item = (SettingView) findViewById(R.id.setting);
-        item.setOnItemViewClick(new SettingView.OnItemViewClick() {
+        SettingView mItem = (SettingView) findViewById(R.id.setting);
+        mItem.setOnItemViewClick(new SettingView.OnItemViewClick() {
             @Override
             public void itemClick() {
                 //do something
             }
         });
+        mItem.setItemText("消息");    //设置条目文字
+        mItem.showDot(false);       //是否显示红点
+        mItem.showRightIcon(true);      //是否显示右边icon
+        mItem.showLeftIcon(true);       //是否显示左边icon
+
     }
 }
