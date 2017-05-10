@@ -91,7 +91,7 @@ mItem.showLeftIcon(true);       //是否显示左边icon</code></pre>
 </tr>
 <tr>
 <td>text_margin_left</td>
-<td>文字距离左边margin</td>
+<td>文字距离左边图标margin</td>
 <td>dimension</td>
 </tr>
 <tr>
